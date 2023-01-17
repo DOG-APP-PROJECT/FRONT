@@ -65,7 +65,7 @@ const  MyPagination = () => {
   return (
     <Box my={2} display="flex" justifyContent="center">
          <ThemeProvider theme={theme}>
-          <Pagination count={data?.totalPages}  color='neutral' onChange={handleOnChange} />
+          <Pagination count={data?.totalPages}  color='primary' onChange={handleOnChange} />
           </ThemeProvider>
         
       </Box>

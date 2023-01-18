@@ -2,7 +2,7 @@ import React from 'react'
 
 import dog_one from '../../images/dog-banner-1.png'
 import dog_two from '../../images/dog-banner-2.png'
-import { Box, } from '@mui/system';
+import { Box, } from '@mui/system'
 import Typography from '@mui/material/Typography';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';

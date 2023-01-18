@@ -12,7 +12,7 @@ import Toolbar from '@mui/material/Toolbar';
 import InputBase from '@mui/material/InputBase';
 import Button from '@mui/material/Button';
 import SearchIcon from '@mui/icons-material/Search';
-import { styled} from '@mui/material/styles';
+import  styled from '@mui/material/styles/styled';
 import PetsIcon from '@mui/icons-material/Pets';
 import Chip from '@mui/material/Chip';
 import { emphasize} from '@mui/material/styles';
@@ -24,7 +24,7 @@ import { useAppDispatch, useAppSelector } from '../../hooks/toolkitHooks';
 import { useLocation, useNavigate } from 'react-router-dom';
 import logo from '../../images/fetchDog.png'
 import { Container } from '@mui/system';
-import { getUserData, useFetchFavoriteUserQuery, userActive } from '../../feactures/user/UserSlice';
+import {  userActive } from '../../feactures/user/UserSlice';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { usePositionY, useWidthScreen } from '../../hooks/customHooks';
 import FavIcon from './favoriteIcon/FavIcon';
@@ -65,30 +65,7 @@ const drawerWidth = 240;
 
 
 
-  
-  const SearchIconWrapper = styled('div')(({ theme }) => ({
-    padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  }));
 
-  const StyledInputBase = styled(InputBase)(({ theme }) => ({
-    color: 'inherit',
-    '& .MuiInputBase-input': {
-      padding: theme.spacing(1, 1, 1, 0),
-      // vertical padding + font size from searchIcon
-      paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-      transition: theme.transitions.create('width'),
-      width: '100%',
-      [theme.breakpoints.up('md')]: {
-        width: '20ch',
-      },
-    },
-  }));
 const Navbar = (props: Props) => {
  
   const activeUser = useAppSelector(state => state.user.active)
